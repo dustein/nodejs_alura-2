@@ -1,4 +1,5 @@
 import { Sequelize } from "sequelize/types";
+// const Sequelize = require('sequelize');
 import { instancia } from "../../banco-de-dados";
 
 const colunas = {
@@ -7,7 +8,7 @@ const colunas = {
         allowNull: false
     },
     email: {
-        type: Sequelize.STRING;
+        type: Sequelize.STRING,
         allowNull: false
     },
     categoria: {
@@ -25,5 +26,6 @@ const opcoes = {
     version: 'versao'
 }
 
-const ModeloTabela = instancia.define('fornecedor', colunas, opcoes);
-export { ModeloTabela };
+const ModeloTabelaFornecedor = instancia.define('fornecedor', colunas, opcoes);
+
+export { ModeloTabelaFornecedor };
